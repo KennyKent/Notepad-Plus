@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/note_list_toolbar_sort"
+        android:enabled="false"
+        android:title="@string/note_list_toolbar_sort_title" />
+
+    <group
+        android:id="@+id/note_list_toolbar_sort_group"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/note_list_toolbar_sort_by_date"
+            android:checked="true"
+            android:title="@string/note_list_toolbar_sort_by_date"
+            app:showAsAction="collapseActionView" />
+        <item
+            android:id="@+id/note_list_toolbar_sort_by_alphabetical"
+            android:title="@string/note_list_toolbar_sort_by_alphabetical"
+            app:showAsAction="collapseActionView" />
+        <item
+            android:id="@+id/note_list_toolbar_sort_by_favorite"
+            android:title="@string/note_list_toolbar_sort_by_favorite"
+            app:showAsAction="collapseActionView" />
+    </group>
+</menu>

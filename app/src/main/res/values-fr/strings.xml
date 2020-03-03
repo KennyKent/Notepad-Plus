@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Notepad</string>
+
+    <string name="note_title_deleted">supprimé</string>
+
+    <string name="note_detail_material_builder_delete_note_title">Suppression d\'une note</string>
+    <string name="note_detail_material_builder_delete_note_message">Êtes-vous sûr de vouloir supprimer la note</string>
+    <string name="note_detail_material_builder_delete_note_positive_button">Supprimer</string>
+    <string name="note_detail_material_builder_delete_note_negative_button">Annuler</string>
+
+    <string name="note_detail_material_builder_back_on_pressed_title">Attetion !</string>
+    <string name="note_detail_material_builder_back_on_pressed_message">Vous risquez de perdre les modifications, voulez-vous vraiment continuer ?</string>
+    <string name="note_detail_material_builder_back_on_pressed_positive_button">Confirmer</string>
+    <string name="note_detail_material_builder_back_on_pressed_negative_button">Annuler</string>
+
+    <string name="note_detail_action_delete">Supprimer</string>
+    <string name="note_detail_action_save">Sauvegarder</string>
+    <string name="note_detail_action_undo">Revenir en arrière</string>
+    <string name="note_detail_action_redo">Avancer</string>
+    <string name="note_detail_nb_character">caractère</string>
+    <string name="note_detail_nb_characters">caractères</string>
+    <string name="note_detail_is_empty">Le titre ne doit pas être vide</string>
+
+    <string name="note_list_search">Rechercher</string>
+    <string name="note_list_toolbar_sort_title">Trier par :</string>
+    <string name="note_list_toolbar_sort_by_date">Date</string>
+    <string name="note_list_toolbar_sort_by_alphabetical">Alphabétique</string>
+    <string name="note_list_toolbar_sort_by_favorite">Favoris</string>
+
+    <string name="left_drawer_home">Accueil</string>
+    <string name="left_drawer_favorite">Favoris</string>
+    <string name="left_drawer_trash">Corbeille</string>
+</resources>

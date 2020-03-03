@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_list_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteListActivity">
+
+    <include layout="@layout/content_note_list" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/note_list_floating_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_plus"
+        app:layout_anchor="@id/note_list_recyclerview"
+        app:layout_anchorGravity="bottom|end" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

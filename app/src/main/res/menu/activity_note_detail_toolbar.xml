@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/note_detail_action_undo"
+        android:icon="@drawable/ic_undo"
+        android:title="@string/note_detail_action_undo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/note_detail_action_redo"
+        android:icon="@drawable/ic_redo"
+        android:title="@string/note_detail_action_redo"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/note_detail_action_delete"
+        android:icon="@drawable/ic_trash"
+        android:title="@string/note_detail_action_delete"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/note_detail_action_save"
+        android:icon="@drawable/ic_floppy_disk"
+        android:title="@string/note_detail_action_save"
+        app:showAsAction="always" />
+
+</menu>

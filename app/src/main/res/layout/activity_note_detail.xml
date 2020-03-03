@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_detail_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NoteDetailActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/note_list_detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimary"
+            app:title="Edition d'une note" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/note_detail_title"
+            style="@style/NoteTitleFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/note_list_detail_toolbar"
+            android:hint="Titre de la note"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/note_detail_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/note_detail_title"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="25 février 2019" />
+
+        <View
+            android:id="@+id/note_detail_view"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/note_detail_title"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/note_detail_date"
+            android:background="#cdcdcd" />
+
+        <TextView
+            android:id="@+id/note_detail_nb_char"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/note_detail_title"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/note_detail_view"
+            android:text="0 caractère" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/note_detail_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/note_detail_nb_char"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:hint="Text de la note" />
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

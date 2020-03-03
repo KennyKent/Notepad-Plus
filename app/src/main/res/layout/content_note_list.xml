@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_list_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mr_white_blur_background">
+
+        <RelativeLayout
+            android:id="@+id/note_list_toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/custom_shadow_background"
+            android:elevation="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/note_list_toolbar_open_drawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:background="?attr/actionBarItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ic_open_drawer" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/note_list_toolbar_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@+id/note_list_toolbar"
+                android:layout_toEndOf="@+id/note_list_toolbar_open_drawer"
+                android:background="#00FFFFFF"
+                android:hint="@string/note_list_search"
+                android:inputType="textPersonName"
+                android:textColor="#000"
+                android:textColorHint="#aaa" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/note_list_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_alignParentEnd="true"
+                android:alpha="0.70"
+                android:backgroundTint="#00FFFFFF"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/main_toolbar_multi_select_mode_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:background="?attr/backgroundColor"-->
+<!--            android:visibility="gone">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/main_toolbar_multi_select_mode_tv"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="35dp"-->
+<!--                android:layout_toEndOf="@+id/main_toolbar_multi_select_mode_close"-->
+<!--                android:textColor="?attr/textColor"-->
+<!--                android:textSize="21sp" />-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0.05dp"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:background="?attr/darkGreyColor" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/main_toolbar_multi_select_mode_delete"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginEnd="20dp"-->
+<!--                android:layout_toStartOf="@+id/main_toolbar_multi_select_mode_menu"-->
+<!--                android:background="?attr/actionBarItemBackground"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                app:srcCompat="@drawable/ic_garbage" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/main_toolbar_multi_select_mode_menu"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:background="?attr/actionBarItemBackground"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                app:srcCompat="@drawable/ic_toolbar_menu" />-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/main_toolbar_multi_select_mode_close"-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:background="?attr/actionBarItemBackground"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                app:srcCompat="@drawable/ic_close" />-->
+
+<!--        </RelativeLayout>-->
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/note_list_toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:background="@color/colorPrimary" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/note_list_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/note_list_toolbar_layout"
+            tools:listitem="@layout/item_note" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/note_list_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorWhite"
+        app:headerLayout="@layout/nav_header_drawer"
+        app:menu="@menu/menu_left_drawer_layout" />
+
+</androidx.drawerlayout.widget.DrawerLayout>
